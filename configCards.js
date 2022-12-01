@@ -1,6 +1,6 @@
-import {createElement} from 'main.js'
+import {createElem} from './main.js'
 const layout = {
-    functions: [createElement],
+    func: createElem,
     front: {
         element: 'div',
         myClass: ['card__front'],
@@ -87,19 +87,31 @@ const layout = {
     }
 }
 
-const cards = [
-    createCard(layout, {
 
 
+function createCard(_layout, object, _father = 'body') {
+    const createElem  = _layout.func
+    const father = document.querySelector(_father)
+    const front = _layout.front
+    // front
+    
+    const newElement = createElem(front.element, front.myClass)
+    if(front.myChildren) front.myChildren.forEach(child => {
+        const newChild = createElem(child.element, child.myClass)
+        console.log(newChild)
+    });
 
-    })
-]
 
-function createCard(layout, object) {
-    // const {  } = layout
+    // back
+    const back = _layout.back
+    
 
 
-    return layout.front.element
+    return newElement
 }
+
+const cards = [
+    createCard(layout, {})
+]
 
 export { cards }

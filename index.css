@@ -9,3 +9,54 @@ body {
     width: 100vw;
     height: 100vh;
 }
+.card__front {
+
+}
+.card__titleAndDescription {
+
+}
+.card__title {
+
+}
+.card__description {
+
+}
+.card__boxImg {
+
+}
+.card__img{
+
+}
+.card__print {
+
+}
+.card__boxBttns {
+
+}
+.card__bttn {
+
+}
+.Card__bttn--turn {
+
+}
+.Card__bttn--runRepo {
+
+}
+.Card__bttn--runProject {
+
+}
+.card__back {
+
+}
+.card__boxTags {
+
+}
+.card__boxImg {
+
+}
+.card__graphic{
+
+}
+.hiddenThis{
+    display: none;
+}
