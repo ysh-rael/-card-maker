@@ -10,31 +10,63 @@ body {
     height: 100vh;
 }
 .card__front {
+    width: 300px;
+    height: 450px;
+    margin: auto;
 
+    background: rgb(217, 231, 179);
 }
 .card__titleAndDescription {
 
 }
 .card__title {
+    width: 200px;
+    height: 40px;
+    margin: auto;
 
+    background: rgb(231, 191, 179);
 }
 .card__description {
+    width: 200px;
+    height: 100px;
+    margin: auto;
 
+    background: rgb(144, 192, 13);
 }
 .card__boxImg {
+    width: 200px;
+    height: 150px;
+    margin: auto;
 
+    background: rgb(184, 11, 175);
 }
 .card__img{
+    width: 20px;
+    height: 10px;
+    margin: auto;
 
+    background: rgb(11, 184, 40);
 }
 .card__print {
 
 }
 .card__boxBttns {
+    width: 200px;
+    height: 100px;
+    margin: auto;
 
+    background: rgb(179, 231, 215);
 }
 .card__bttn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 20px;
+    height: 10px;
+    margin: auto;
 
+    background: rgb(104, 126, 4);
 }
 .Card__bttn--turn {
 
@@ -46,6 +78,7 @@ body {
 
 }
 .card__back {
+    display: none;
 
 }
 .card__boxTags {
