@@ -1,3 +1,4 @@
+/* Find 'cards' to tweak or create the card.*/
 const layout = {
     func: createElem,
     scope: {
