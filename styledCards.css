@@ -3,70 +3,113 @@
     padding: 0;
     font-style: 0;
     border: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #d6d6d68a;
 }
 body {
-    background-image: linear-gradient(-45deg, #3335388a, rgb(65, 65, 73));
-    width: 100vw;
-    height: 100vh;
+    background: linear-gradient(95deg, #d6d6d68a, rgb(44, 44, 61));
+   background-size: auto;
+    
+}
+.cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: auto;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card__scope {
+    display: flex;
+    width: 19rem;
+    height: 22rem;
+    min-width: 300px;
+
+    transform-style: preserve-3d;
+    transition: all .6s;
+
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #0f1630 10%, #121a38 40%, #1f2d61 60%, #223269 80%, #253672 90%, #24346e 100%);
+    border: 1px solid #fdfdfd4d;
+    box-shadow: 4px 4px 8px #0000002c;
+   
+}
+.flip, .card__front {
+    transform: rotateY(180deg);
+}
+.card__scope:hover { 
+    border: 1px solid #ffffff7e; 
 }
 .card__front {
-    width: 300px;
-    height: 450px;
-    margin: auto;
-
-    background: rgb(217, 231, 179);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 1.25rem 1.25rem 0.8rem 1.25rem;
 }
 .card__titleAndDescription {
-
+    
 }
 .card__title {
-    width: 200px;
-    height: 40px;
-    margin: auto;
+    overflow: hidden;
 
-    background: rgb(231, 191, 179);
+    font-size: 1.05rem;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+    color: #ffffff;
 }
 .card__description {
-    width: 200px;
-    height: 100px;
-    margin: auto;
-
-    background: rgb(144, 192, 13);
+    color: #dadada;
+    height: 6.6rem;
+    overflow-y: auto;
 }
-.card__boxImg {
-    width: 200px;
-    height: 150px;
-    margin: auto;
+.card__boxImg {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    border-radius: 10px;
+    overflow: hidden;
 
-    background: rgb(184, 11, 175);
+    background: #dadada;
 }
 .card__img{
-    width: 20px;
-    height: 10px;
-    margin: auto;
-
-    background: rgb(11, 184, 40);
+    
 }
 .card__print {
-
+    min-width: 100%;
+    min-height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition-duration: 1600ms;
+}
+.card__print:active {
+    transform: scale(0.6);
 }
 .card__boxBttns {
-    width: 200px;
-    height: 100px;
-    margin: auto;
-
-    background: rgb(179, 231, 215);
-}
-.card__bttn {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 20px;
-    height: 10px;
-    margin: auto;
+    align-items: flex-end;
+    width: 100%;
 
-    background: rgb(104, 126, 4);
+}
+.card__bttn {
+    width: 2rem;
+    height: 2rem;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
 }
 .Card__bttn--turn {
 
@@ -78,11 +121,31 @@ body {
 
 }
 .card__back {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 1.25rem 1.25rem 0.8rem 1.25rem;
 
 }
 .card__boxTags {
-
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: auto;
+    height: 6.6rem;
+    
+}
+.card__tag {
+    width: max-content;
+    max-width: 100%;
+    height: max-content;
+    margin-left: 5px;
+    margin-right: 5px;
+    
 }
 .card__boxImg {
 
@@ -90,6 +153,17 @@ body {
 .card__graphic{
 
 }
-.hiddenThis{
+.cardCard__bttnIcon {
+    width: 100%;
+    opacity: .6;
+    user-select: none;
+    user-zoom: none;
+    -webkit-user-drag: none;
+}
+.cardCard__bttnIcon:hover {
+    opacity: 1;
+    
+}
+.hiddenThis, .card__description::-webkit-scrollbar, .card__boxTags::-webkit-scrollbar{
     display: none;
 }
